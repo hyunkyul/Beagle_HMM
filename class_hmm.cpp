@@ -16,7 +16,7 @@
  * =====================================================================================
  */
 
-
+/*
 // libraries
 #include <iostream>
 
@@ -36,7 +36,7 @@ level::level():transition(0){}
 level::level(int x): transition(x) {}
 
 
-/*
+
 class node:	public level 
 {
 protected:
@@ -45,7 +45,7 @@ public:
 int next(){
 
 }
-*/
+
 
 int main() 
 {
@@ -62,6 +62,31 @@ int main()
 	<< lvl3.trans() << lvl4.trans() <<"\n\n";
 
 return 0;
+}
+
+*/
+
+#include <iostream>
+#include "class_hmm.h"
+
+Level::Level() {
+	transition = 0;
+}
+
+Level::Level(int trans)	{
+	transition = trans; 
+}
+
+Level::~Level()	{
+
+}
+
+int Level::getTransition() const {
+	return transition;
+}
+
+void Level::setTransition(int trans) {
+	transition = trans;
 }
 
 
