@@ -22,43 +22,45 @@
 
 class level	
 {
-private:
+protected:
 	int transition;
 public:
 	level (int);
 	level ();
 	int trans() {return transition;}
+//	int set_trans(int x):transition(x){};
 };
-
-	//int set_trans(int);
-//	}; 
+ 
 level::level():transition(0){}
 
 level::level(int x): transition(x) {}
 
 
 /*
-int level::set_trans(int x)
+class node:	public level 
 {
-	transition=x;
-	return 0;
+protected:
+
+public:
+int next(){
+
 }
 */
-
 
 int main() 
 {
 	int i;
 		
 	std::cout << "Initializing : complete \n";
-
+	
 	level lvl1 (2);	
 	level lvl2 (3);	
 	level lvl3 (3);	
-	level lvl4 (5);	
-
-	std::cout << "transition map	: " << lvl1.trans() << lvl2. trans() 
+	level lvl4 (5);
+	
+	std::cout << "transition map	: " << lvl1.trans() << lvl2.trans() 
 	<< lvl3.trans() << lvl4.trans() <<"\n\n";
+
 return 0;
 }
 
