@@ -16,6 +16,29 @@
  * =====================================================================================
  */
 
+#include "class_hmm.h"
+
+Level::Level() {
+	transition = 0;
+}
+
+Level::Level(int trans)	{
+	transition = trans; 
+}
+
+Level::~Level()	{
+
+}
+
+int Level::getTransition() const {
+	return transition;
+}
+
+void Level::setTransition(int trans) {
+	transition = trans;
+}
+
+
 /*
 // libraries
 #include <iostream>
@@ -65,28 +88,5 @@ return 0;
 }
 
 */
-
-#include <iostream>
-#include "class_hmm.h"
-
-Level::Level() {
-	transition = 0;
-}
-
-Level::Level(int trans)	{
-	transition = trans; 
-}
-
-Level::~Level()	{
-
-}
-
-int Level::getTransition() const {
-	return transition;
-}
-
-void Level::setTransition(int trans) {
-	transition = trans;
-}
 
 

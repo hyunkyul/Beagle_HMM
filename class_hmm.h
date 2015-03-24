@@ -24,8 +24,7 @@
 #include <iostream>
 #include <string>
 
-class Level
-{
+class Level {
 public:
 
 	//Default constructor
@@ -48,6 +47,7 @@ public:
 		//@Param int - number of transitions 
 
 private:
+
 	//Member variables
 	int transition;
 	

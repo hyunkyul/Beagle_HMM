@@ -21,7 +21,7 @@
 #include <vector>
 #include "class_hmm.h"
 
-void fillVector(std::vector <Level>&);
+void fillVector(std::vector<Level>&);
 	//fillVector - fill in Level information 
 	//	@Param vector<Level>& - Levels in class
 
@@ -35,7 +35,7 @@ int main () {
 	std::vector<Level> myLevel;
 	
 	fillVector(myLevel);
-	printVector(myLevel);
+printVector(myLevel);
 
 return 0;
 }
@@ -43,15 +43,16 @@ return 0;
 void fillVector(std::vector<Level>& newMyLevel)	{
 	int number = 4;	
 	int Vectrans[4] = {2,3,3,5};
+	int trans;
 
 	std::cout << "There are " << number << " of transition states";
 	
 	for (int i = 0; i<number; i++) {
 
-	std::cin >> Vectrans[i];
 	std::cout << " Level " << i << " has " << Vectrans[i] << "transitions"; 
-	
-	Level newlvl(Vectrans[i]);	
+	trans = Vectrans[i];
+
+	Level newlvl(trans);	
 	newMyLevel.push_back(newlvl);	
 	std::cout << std::endl;
 
@@ -60,6 +61,7 @@ std::cout << std::endl;
 
 
 }
+
 
 void printVector(const std::vector<Level>& newMyLevel) {
 
