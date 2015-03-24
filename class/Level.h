@@ -18,8 +18,8 @@
 
 //Header
 
-#ifndef CLASS_HMM_H
-#define CLASS_HMM_H
+#ifndef Level_H
+#define Level_H
 
 #include <iostream>
 #include <string>
@@ -50,6 +50,7 @@ private:
 
 	//Member variables
 	int transition;
+
 	
 };
 

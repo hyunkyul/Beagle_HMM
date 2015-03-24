@@ -16,7 +16,7 @@
  * =====================================================================================
  */
 
-#include "class_hmm.h"
+#include "Level.h"
 
 Level::Level() {
 	transition = 0;
@@ -37,56 +37,5 @@ int Level::getTransition() const {
 void Level::setTransition(int trans) {
 	transition = trans;
 }
-
-
-/*
-// libraries
-#include <iostream>
-
-class level	
-{
-protected:
-	int transition;
-public:
-	level (int);
-	level ();
-	int trans() {return transition;}
-//	int set_trans(int x):transition(x){};
-};
- 
-level::level():transition(0){}
-
-level::level(int x): transition(x) {}
-
-
-
-class node:	public level 
-{
-protected:
-
-public:
-int next(){
-
-}
-
-
-int main() 
-{
-	int i;
-		
-	std::cout << "Initializing : complete \n";
-	
-	level lvl1 (2);	
-	level lvl2 (3);	
-	level lvl3 (3);	
-	level lvl4 (5);
-	
-	std::cout << "transition map	: " << lvl1.trans() << lvl2.trans() 
-	<< lvl3.trans() << lvl4.trans() <<"\n\n";
-
-return 0;
-}
-
-*/
 
 
