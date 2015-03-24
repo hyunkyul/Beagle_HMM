@@ -22,6 +22,7 @@
 #include "Level.h"
 #include "Node.h"
 
+
 void fillVector(std::vector<std::vector<Node> >&);
 	// fillNode - fill in Node information
 	//	@Param vector<vector<Node> >& - Nodes in class Levels.transitions[array]
@@ -29,6 +30,7 @@ void fillVector(std::vector<std::vector<Node> >&);
 void printVector(const std::vector<std::vector<Node> >&);
 	// printNode - prints the information of all Nodes
 	// @param const vector<vector<Node> >&
+
 
 void fillLevel(std::vector<Level>&);
 	// fillLevel - fill in Level information 
@@ -46,39 +48,58 @@ int main () {
 	fillLevel(myLevel);
 	printLevel(myLevel);
 
-	std::vector<std::vector<Node> > myNode(iarr,iarr+sizeof(iarr)/sizeof(iarr[0]));
-
+	std::vector<std::vector<Node> > myNode;
+//	std::vector<std::vector<Node*> > myNode
+	
 	fillVector(myNode);
-	printNode(myNode);
+	printVector(myNode);
 
 return 0;
 }
+
+
 	
+void printVector(const std::vector<std::vector<Node> >& newMyNode) {
+	unsigned int isize= newMyNode.size();
+	for (unsigned i=0;i<isize;i++){
+	std::cout << "Level: " << i << " transition: "<< std::endl; 
+		unsigned int jsize = newMyNode[i].size();
+		for (unsigned j=0;j<jsize;j++){
+		std::cout<< newMyNode[i][j].getNext() << " ";
+		}
+	std::cout<< std::endl;
+	}
+
+}
+
 void fillVector(std::vector<std::vector<Node> >& newMyNode) {
 	//define number of i iterations
 
 	int number = newMyNode.size();
-	int iarr[4]={2,3,3,5}
+	int iarr[4]={2,3,3,5};
+	
 
 	//define number of j iterations 
-	int Vectrans[iarr][iarr]={{2,1},{2,1,1},{2,1,3},{1,1,1,1,1}};
 
-	//define 
+	int Vectrans[4] = {2,3,3,5};
 	int ne;
 
-	std::cout << std::endl<< number << std::endl;
-	int i,j;
+//	std::cout << std::endl<< number << std::endl;
+	int i;
 	
-	for (i=0;i<number;i++) {
-		for(j=0;j<iarr[i];j++) {
-		ne = Vectrans[i][j];
+	for (i=0;i<4;i++) {	
+	newMyNode.push_back(std::vector<Node>(i++,0));
+		for(std::vector<std::vector<Node> >::iterator it = newMyNode.begin(); it != newMyNode.end();++it) {
+		ne = 0;
 		Node newnode(ne);
-		newMyNode.push_back(newnode);
+		newMyNode[i].push_back(newnode);
 		std::cout<<std::endl;
 		}
 	}
 	std::cout<<std::endl;
 }
+
+
 
 void fillLevel(std::vector<Level>& newMyLevel)	{
 	int number = 4;	
