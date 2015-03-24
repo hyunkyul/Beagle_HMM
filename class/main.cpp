@@ -49,16 +49,13 @@ int main () {
 	printLevel(myLevel);
 
 	std::vector<std::vector<Node> > myNode;
-//	std::vector<std::vector<Node*> > myNode
 	
 	fillVector(myNode);
-	printVector(myNode);
+//	printVector(myNode);
 
 return 0;
 }
-
-
-	
+/*	
 void printVector(const std::vector<std::vector<Node> >& newMyNode) {
 	unsigned int isize= newMyNode.size();
 	for (unsigned i=0;i<isize;i++){
@@ -69,8 +66,8 @@ void printVector(const std::vector<std::vector<Node> >& newMyNode) {
 		}
 	std::cout<< std::endl;
 	}
-
 }
+*/
 
 void fillVector(std::vector<std::vector<Node> >& newMyNode) {
 	//define number of i iterations
@@ -85,18 +82,18 @@ void fillVector(std::vector<std::vector<Node> >& newMyNode) {
 	int ne;
 
 //	std::cout << std::endl<< number << std::endl;
-	int i;
+	int i,j;
 	
-	for (i=0;i<4;i++) {	
-	newMyNode.push_back(std::vector<Node>(i++,0));
-		for(std::vector<std::vector<Node> >::iterator it = newMyNode.begin(); it != newMyNode.end();++it) {
-		ne = 0;
+	for (i=0;i<4;i++) {
+	newMyNode.push_back(std::vector<Node>(0,0));		
+		for(j=0;j<Vectrans[i];j++) {
+		ne = j+1;
 		Node newnode(ne);
 		newMyNode[i].push_back(newnode);
-		std::cout<<std::endl;
+		std::cout<<newMyNode[i][j].getNext();
 		}
-	}
 	std::cout<<std::endl;
+	}
 }
 
 
