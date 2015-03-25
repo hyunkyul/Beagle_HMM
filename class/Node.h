@@ -29,25 +29,34 @@ public:
 	Node();
 	
 	//Overload constructor
-	Node(int);
+	Node(int, int);
 
 	//Destructor
 	~Node();
 	
 	//Accessor Functions 
-	int getNext() const;
-		// getNext
-		// @return int - Address of next node 
+	int getNext1() const;
+		// getNext1
+		// @return int - Address of next major node
+		
+	int getNext2() const;
+		// getNext2
+		// @return int - Address of next minor node 
 
 	//Mutator Functions
-	void setNext(int);
-		//setNext
-		// @Param int - Address for next node
+	void setNext1(int);
+		// setNext1
+		// @Param int - Address for next major node
+
+	void setNext2(int);
+		// setNext2
+		// @Param int - Address for next minor node
 
 private:
 
 	//Member Variables
-	int next;
+	int next1;
+	int next2;
 
 };
 

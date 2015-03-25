@@ -19,23 +19,33 @@
 #include "Node.h"
 
 Node::Node() {
-	next = 0;
+	next1 = 0;
+	next2 = 0;
 }
 
-Node::Node(int ne) {
-	next = ne;
+Node::Node(int ne1, int ne2) {
+	next1 = ne1;
+	next2 = ne2;
 }
 
 Node::~Node(){
 
 }
 
-int Node::getNext() const {
-	return next;
+int Node::getNext1() const {
+	return next1;
 }
 
-void Node::setNext(int ne)	{
-	next = ne;
+int Node::getNext2() const {
+	return next2;
+}
+
+void Node::setNext1(int ne1)	{
+	next1 = ne1;
+}
+
+void Node::setNext2(int ne2)	{
+	next2 = ne2;
 }
 
 
