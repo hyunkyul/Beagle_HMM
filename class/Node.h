@@ -58,6 +58,15 @@ private:
 	int next1;
 	int next2;
 
+    Node* afront;
+    Node* bfront;
+    double aweight;
+    double bweight;
+    Node* aback;
+    Node* bback;
+
+
+
 };
 
 

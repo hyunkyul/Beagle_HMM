@@ -60,9 +60,11 @@ public:
 		// setWeight
 		// @Param double - the identity for the edge
 
+    // Update functions. 3/25/13 HB
 
 private:
 	int endpoint;		// the direction of the edge to the node
+    char emission;      // nucleotide emitted
 	int observe;		// 1 or 0 to activate forward algorithm calculations
 	double weight;		// represent the unique identity of the edge
 
