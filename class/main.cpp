@@ -23,11 +23,13 @@
 #include "Node.h"
 
 
-void fillVector(std::vector<std::vector<Node> >&);
+//function initializations
+
+void fillNode(std::vector<std::vector<Node> >&);
 	// fillNode - fill in Node information
 	//	@Param vector<vector<Node> >& - Nodes in class Levels.transitions[array]
 
-void printVector(const std::vector<std::vector<Node> >&);
+void printNode(const std::vector<std::vector<Node> >&);
 	// printNode - prints the information of all Nodes
 	// @param const vector<vector<Node> >&
 
@@ -40,6 +42,13 @@ void printLevel(const std::vector<Level>&);
 	// printVector - prints the information of all Levels
 	//	@Param const vector<Level>& - Levels in class
 
+//****************************************************************
+//*** ***** ****** *******     *** ** ****************************
+//***  ***  ***** * ******** *****  * ****************************
+//*** * * * ****     ******* ***** *  ****************************
+//*** ** ** *** ***** ****     *** ** ****************************
+//****************************************************************
+
 int main () {
 	int iarr[4]={2,3,3,5};
 
@@ -50,13 +59,24 @@ int main () {
 
 	std::vector<std::vector<Node> > myNode;
 	
-	fillVector(myNode);
-//	printVector(myNode);
+	fillNode(myNode);
+	printNode(myNode);
+
+	
 
 return 0;
 }
-/*	
-void printVector(const std::vector<std::vector<Node> >& newMyNode) {
+//****************************************************************
+//****************************************************************
+//****************************************************************
+//****************************************************************
+//****************************************************************
+//****************************************************************
+
+
+// Node functions
+
+void printNode(const std::vector<std::vector<Node> >& newMyNode) {
 	unsigned int isize= newMyNode.size();
 	for (unsigned i=0;i<isize;i++){
 	std::cout << "Level: " << i << " transition: "<< std::endl; 
@@ -67,22 +87,13 @@ void printVector(const std::vector<std::vector<Node> >& newMyNode) {
 	std::cout<< std::endl;
 	}
 }
-*/
 
-void fillVector(std::vector<std::vector<Node> >& newMyNode) {
-	//define number of i iterations
 
-	int number = newMyNode.size();
-	int iarr[4]={2,3,3,5};
-	
+void fillNode(std::vector<std::vector<Node> >& newMyNode) {
 
-	//define number of j iterations 
-
+	int i,j;
 	int Vectrans[4] = {2,3,3,5};
 	int ne;
-
-//	std::cout << std::endl<< number << std::endl;
-	int i,j;
 	
 	for (i=0;i<4;i++) {
 	newMyNode.push_back(std::vector<Node>(0,0));		
@@ -90,12 +101,13 @@ void fillVector(std::vector<std::vector<Node> >& newMyNode) {
 		ne = j+1;
 		Node newnode(ne);
 		newMyNode[i].push_back(newnode);
-		std::cout<<newMyNode[i][j].getNext();
 		}
 	std::cout<<std::endl;
 	}
 }
 
+
+// level functions
 
 
 void fillLevel(std::vector<Level>& newMyLevel)	{
