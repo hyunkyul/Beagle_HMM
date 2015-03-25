@@ -27,7 +27,7 @@ public:
 		
 	//Default constructor
 	Edge();
-	
+   	
 	//Overload constructor
 	Edge(int, int, double);
 
