@@ -21,9 +21,9 @@
 #include <vector>
 #include "Level.h"
 #include "Node.h"
+#include "Edge.h"
 
-
-//function initializations
+//function Declarations
 
 void fillNode(std::vector<std::vector<Node> >&);
 	// fillNode - fill in Node information
@@ -61,7 +61,10 @@ int main () {
 	fillNode(myNode);
 	printNode(myNode);
 
+	std::vector<std::vector<std::vector<Edge> > > myEdge;
 	
+	fillEdge(myEdge, myNode);
+		
 
 return 0;
 }
@@ -72,8 +75,13 @@ return 0;
 //****************************************************************
 //****************************************************************
 
+// Edge functions ************************************************************************
 
-// Node functions
+void fillEdge(	std::vector<std::vector<std::vector<Edge> > >& newMyEdge, 
+					std::vector<std::vector<Node> >& newMyNode					) {
+		
+
+// Node functions ************************************************************************
 
 void printNode(const std::vector<std::vector<Node> >& newMyNode) {
 	unsigned int isize= newMyNode.size();
@@ -116,9 +124,10 @@ void fillNode(std::vector<std::vector<Node> >& newMyNode) {
 }
 
 
+// End of Node functions ************************************************************************
 
-// level functions
 
+// Level functions ************************************************************************
 
 void fillLevel(std::vector<Level>& newMyLevel)	{
 	int number = 5;	
@@ -151,3 +160,4 @@ void printLevel(const std::vector<Level>& newMyLevel) {
 
 }
 	
+// End of Level functions ************************************************************************

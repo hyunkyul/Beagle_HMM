@@ -23,9 +23,9 @@ Node::Node() {
 	next2 = 0;
 }
 
-Node::Node(int ne1, int ne2) {
-	next1 = ne1;
-	next2 = ne2;
+Node::Node(int major, int minor) {
+	next1 = major;
+	next2 = minor;
 }
 
 Node::~Node(){
@@ -40,12 +40,12 @@ int Node::getNext2() const {
 	return next2;
 }
 
-void Node::setNext1(int ne1)	{
-	next1 = ne1;
+void Node::setNext1(int major)	{
+	next1 = major;
 }
 
-void Node::setNext2(int ne2)	{
-	next2 = ne2;
+void Node::setNext2(int minor)	{
+	next2 = minor;
 }
 
 
