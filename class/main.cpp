@@ -115,7 +115,8 @@ void fillEdge(	std::vector<std::vector<Edge> >& newMyEdge,
 		}
 // set edge class space;
 		for (i=0;i<isize;i++) 	{
-			newMyEdge.push_back(std::vector<Edge>());		
+std::vector<Edge> empty = new std::vector<Edge>();
+			newMyEdge.push_back(empty);		
 			for (k=0;k<ksize[i];k++)	{
 						
 			Edge newedge(arr[i][k][0],arr[i][k][1],arr[i][k][2]);
